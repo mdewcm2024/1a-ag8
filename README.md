@@ -1,3 +1,4 @@
+分組網站:https://mdewcm2024.github.io/1a-ag8/content/index.html
 # cmsimde_site
 
 利用 init_replit 指令安裝所需 Python 模組
