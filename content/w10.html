@@ -142,16 +142,54 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content"> <a href='分組專案.html'>Next</a> >> 分組專案<br /><h1>About</h1>
-<p>網頁: <a href="https://mdewcm2024.github.io/1a-ag8">https://mdewcm2024.github.io/1a-ag8</a></p>
-<p>網誌: 請填入目前網站所在的 URL/blog, <a href="https://mde.tw/cmsimde_site/blog">https://mde.tw/cmsimde_site/blog</a></p>
-<p>簡報: 請填入目前網站所在的 URL/reveal, <a href="https://mde.tw/cmsimde_site/reveal">https://mde.tw/cmsimde_site/reveal</a></p>
-<p>倉儲: <a href="https://github.com/mdewcm2024/1a-ag8">mdewcm2024/1a-ag8</a></p>
-<p>本 cmsimde 網際內容管理系統的對應 Template 倉儲:</p>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
-<p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
-<p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<br /> <a href='分組專案.html'>Next</a> >> 分組專案</div>
+    <div id="tipue_search_content">Replit << <a href='Replit.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>w10</h1>
+<p>建立一個包含以下程式的gist</p>
+<p>並且取出其URL: <a href="https://gist.githubusercontent.com/40823238/cc863ec47f3362791ca01a10ecd5e786/raw/2a586f54076df00d5b1e846c550954a8a4089e7e/40823238_w10_step1.py">gist.githubusercontent.com/40823238/cc863ec47f3362791ca01a10ecd5e786/raw/2a586f54076df00d5b1e846c550954a8a4089e7e/40823238_w10_step1.py</a></p>
+<p>接著到Brython頁面的網址後加 ?src=URL</p>
+<p>就可在<a href="https://40823238.github.io/wcm2024/content/Brython.html?src=https://gist.githubusercontent.com/40823238/cc863ec47f3362791ca01a10ecd5e786/raw/2a586f54076df00d5b1e846c550954a8a4089e7e/40823238_w10_step1.py">頁面</a>中運行程式</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import window, ajax
+  
+def fetch_csv_data():
+  # CSV 檔案網址
+  url = "https://mdewcm2024.github.io/1astud-site/downloads/1a.txt"
+  
+  def on_complete(req):
+    if req.status == 200 or req.status == 0:
+      # 讀取 CSV 檔案內容
+      content = req.text
+  
+      # 依照換行符號拆分資料
+      lines = content.split('\n')
+  
+      # 建立空列表儲存資料
+      data = []
+  
+      # 遍歷每一行資料
+      for line in lines:
+        # 忽略空白行
+        if line.strip() == "":
+          continue
+  
+        # 依照逗號拆分資料
+        items = line.split(',')
+  
+        # 將拆分後的資料加入列表
+        data.append(items)
+  
+      # 印出結果
+      print(data)
+    else:
+      print("Error:", req.text)
+  
+  # 發送 AJAX 請求
+  req = ajax.ajax()
+  req.bind('complete', on_complete)
+  req.open('GET', url, True)
+  req.set_header('content-type', 'application/x-www-form-urlencoded')
+  req.send()
+  
+# 呼叫函式讀取 CSV 資料
+fetch_csv_data()</pre><br />Replit << <a href='Replit.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
 
     <!-- footer -->
       <div class="container">
