@@ -7,19 +7,485 @@
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
 <p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
 <p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 <h1>報告</h1>
-<p>期中報告:<br/>期末報告:</p><h2>期中報告</h2>
-<h2>期末報告</h2>
-<p><span>簡報的pdf檔:</span><a href="https://41046109.github.io/wcm2024/downloads/%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A.pdf">https://ae22c730-b810-41f2-9a53-75b687f6bcb9-00-3ph1ityc3jnj.sisko.replit.dev/downloads/%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A.pdf</a></p>
+<p>期中報告:<br/>期末報告:</p>
+<h2>期中報告</h2>
+<p>期中報告題目: Brython 程式應用</p>
+<p><a href="https://41046109.github.io/wcm2024/downloads/%E6%9C%9F%E4%B8%AD%E5%A0%B1%E5%91%8A.pdf">簡報的pdf檔</a></p>
+<p>簡報的影片檔:</p>
+<p><iframe allowfullscreen="allowfullscreen" frameborder="2" height="315" src="https://www.youtube.com/embed/uTmsGUi9BqE?si=GFXieUcODyIThIlu" width="560"></iframe></p>
+<p><span>計算機的操作影片:</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/OIfJGleloSE?si=JJv3LrkHkWg3tLRx" title="YouTube video player" width="560"></iframe></p>
+<h2>計算機</h2><h2>期末報告</h2>
+<p><span><a href="https://41046109.github.io/wcm2024/downloads/%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A.pdf">簡報的pdf檔</a></span></p>
 <p><span>簡報的影片檔:</span></p>
-<p><iframe allowfullscreen="allowfullscreen" frameborder="2" height="315" src="https://www.youtube.com/embed/ImJssLcvV0w?si=ZDBkTMNxTG7HqJRv" width="560"></iframe></p><h1>cmsimde</h1>
-=======
+<p><iframe allowfullscreen="allowfullscreen" frameborder="2" height="315" src="https://www.youtube.com/embed/ImJssLcvV0w?si=ZDBkTMNxTG7HqJRv" width="560"></iframe></p>
+<h2>五子棋遊戲</h2>
+<p><img alt="" height="350" src="/images/遊戲選項.png" width="300"/></p>
+<p>程式碼:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;遊戲選項&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            font-size: 1.5em;
+            margin: 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 2px solid #000;
+            background-color: #fff;
+            text-align: center;
+            width: 200px;
+            text-decoration: none;
+            color: #000;
+        }
+        .menu-item:hover {
+            background-color: #ddd;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;遊戲選項&lt;/h1&gt;
+    &lt;a class="menu-item" href="members.html"&gt;成員名單&lt;/a&gt;
+    &lt;a class="menu-item" href="purpose.html"&gt;製作目的與目標&lt;/a&gt;
+    &lt;a class="menu-item" href="game-options.html"&gt;遊戲選擇&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p></p>
+<h3>成員名單</h3>
+<p><img alt="" height="350" src="/images/成員名單.png" width="300"/></p>
+<p>程式碼:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;成員名單&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: 2px solid #000;
+            background-color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+        }
+        .back-button:hover {
+            background-color: #ddd;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;成員名單&lt;/h1&gt;
+    &lt;p&gt;第八組&lt;/p&gt;
+    40823114、40823124&lt;br&gt;
+    40823238、41223129&lt;br&gt;
+    41046109、41046137&lt;br&gt;
+    
+    
+    &lt;a class="back-button" href="index.html"&gt;返回主菜單&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p></p>
+<h3>製作目的與目標</h3>
+<p><img alt="" height="350" src="/images/製作目的與目標.png" width="300"/></p>
+<p>程式碼:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;製作目的與目標&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: 2px solid #000;
+            background-color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+        }
+        .back-button:hover {
+            background-color: #ddd;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;製作目的與目標&lt;/h1&gt;
+    &lt;p&gt;課堂作業&lt;/p&gt;
+    為了期末報告而做出五子棋這個小遊戲。&lt;br&gt;
+    可以讓我們更清楚及了解機械系生產產品時會有的問題。&lt;br&gt; 
+    &lt;a class="back-button" href="index.html"&gt;返回主菜單&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p></p>
+<h3>遊戲畫面</h3>
+<p><img alt="" height="350" src="/images/遊戲畫面.png" width="300"/></p>
+<p>程式碼:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;五子棋遊戲&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        #board {
+            display: grid;
+            grid-template-columns: repeat(15, 30px);
+            grid-template-rows: repeat(15, 30px);
+            gap: 0;
+            border: 4px solid black;
+            background-color: #ffdead;
+            position: relative;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            position: relative;
+        }
+        .line {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        .piece {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .player {
+            background-color: blue;
+        }
+        .ai {
+            background-color: red;
+        }
+        .scoreboard {
+            position: absolute;
+            top: -40px;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% + 40px);
+            left: -20px;
+        }
+        .score {
+            font-size: 18px;
+            margin: 0 20px;
+        }
+        @media (max-width: 600px) {
+            .cell {
+                width: 20px;
+                height: 20px;
+            }
+            .piece {
+                width: 15px;
+                height: 15px;
+            }
+            #board {
+                grid-template-columns: repeat(15, 20px);
+                grid-template-rows: repeat(15, 20px);
+            }
+        }
+        #backButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;五子棋遊戲&lt;/h1&gt;
+    &lt;div id="container"&gt;
+        &lt;button id="backButton" onclick="goBack()"&gt;返回選單&lt;/button&gt;
+        &lt;div class="scoreboard"&gt;
+            &lt;p class="score"&gt;玩家得分: &lt;span id="playerScore"&gt;0&lt;/span&gt;&lt;/p&gt;
+            &lt;p class="score"&gt;對手得分: &lt;span id="aiScore"&gt;0&lt;/span&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="board"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button onclick="resetGame()"&gt;重置遊戲&lt;/button&gt;
+
+    &lt;script&gt;
+        const board = document.getElementById('board');
+        const playerScoreElem = document.getElementById('playerScore');
+        const aiScoreElem = document.getElementById('aiScore');
+
+        let boardState = Array(15).fill().map(() =&gt; Array(15).fill(0));
+        let playerScore = 0;
+        let aiScore = 0;
+
+        function createBoard() {
+            board.innerHTML = '';
+            for (let y = 0; y &lt; 15; y++) {
+                for (let x = 0; x &lt; 15; x++) {
+                    const cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    const line = document.createElement('div');
+                    line.classList.add('line');
+                    cell.appendChild(line);
+                    cell.dataset.x = x;
+                    cell.dataset.y = y;
+                    cell.addEventListener('click', playerMove);
+                    board.appendChild(cell);
+                }
+            }
+        }
+
+        function playerMove(event) {
+            const x = parseInt(event.target.parentElement.dataset.x);
+            const y = parseInt(event.target.parentElement.dataset.y);
+            if (boardState[y][x] === 0) {
+                boardState[y][x] = 1;
+                event.target.parentElement.appendChild(createPiece('player'));
+                if (checkWinner(1)) {
+                    alert('玩家獲勝！');
+                    playerScore++;
+                    updateScores();
+                    resetGame();
+                    return;
+                }
+                setTimeout(aiMove, 500);
+            }
+        }
+
+        function aiMove() {
+            let move = findWinningMove(2) || findWinningMove(1) || findPotentialThreat(2) || findPotentialThreat(1) || findRandomMove();
+            if (move) {
+                boardState[move.y][move.x] = 2;
+                const cell = board.querySelector(`[data-x='${move.x}'][data-y='${move.y}']`);
+                cell.appendChild(createPiece('ai'));
+                if (checkWinner(2)) {
+                    alert('對手獲勝！');
+                    aiScore++;
+                    updateScores();
+                    resetGame();
+                    return;
+                }
+            }
+        }
+
+        function findWinningMove(player) {
+            for (let y = 0; y &lt; 15; y++) {
+                for (let x = 0; x &lt; 15; x++) {
+                    if (boardState[y][x] === 0) {
+                        boardState[y][x] = player;
+                        if (checkWinner(player)) {
+                            boardState[y][x] = 0;
+                            return { x, y };
+                        }
+                        boardState[y][x] = 0;
+                    }
+                }
+            }
+            return null;
+        }
+
+        function findPotentialThreat(player) {
+            for (let y = 0; y &lt; 15; y++) {
+                for (let x = 0; x &lt; 15; x++) {
+                    if (boardState[y][x] === 0) {
+                        boardState[y][x] = player;
+                        if (checkPotentialThreat(player)) {
+                            boardState[y][x] = 0;
+                            return { x, y };
+                        }
+                        boardState[y][x] = 0;
+                    }
+                }
+            }
+            return null;
+        }
+
+        function checkPotentialThreat(player) {
+            const directions = [
+                { dx: 1, dy: 0 },
+                { dx: 0, dy: 1 },
+                { dx: 1, dy: 1 },
+                { dx: 1, dy: -1 }
+            ];
+            for (let y = 0; y &lt; 15; y++) {
+                for (let x = 0; x &lt; 15; x++) {
+                    if (boardState[y][x] === player) {
+                        for (let { dx, dy } of directions) {
+                            if (checkThreatDirection(x, y, dx, dy, player)) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        function checkThreatDirection(x, y, dx, dy, player) {
+            let count = 0;
+            for (let i = 0; i &lt; 5; i++) {
+                const nx = x + i * dx;
+                const ny = y + i * dy;
+                if (nx &gt;= 0 &amp;&amp; nx &lt; 15 &amp;&amp; ny &gt;= 0 &amp;&amp; ny &lt; 15 &amp;&amp; boardState[ny][nx] === player) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+            return count &gt;= 3; // Consider a position a threat if there are 3 in a row
+        }
+
+        function findRandomMove() {
+            let moves = [];
+            for (let y = 0; y &lt; 15; y++) {
+                for (let x = 0; x &lt; 15; x++) {
+                    if (boardState[y][x] === 0) {
+                        moves.push({ x, y });
+                    }
+                }
+            }
+            return moves.length ? moves[Math.floor(Math.random() * moves.length)] : null;
+        }
+
+        function createPiece(playerClass) {
+            const piece = document.createElement('div');
+            piece.classList.add('piece', playerClass);
+            return piece;
+        }
+
+        function checkWinner(player) {
+            const directions = [
+                { dx: 1, dy: 0 },
+                { dx: 0, dy: 1 },
+                { dx: 1, dy: 1 },
+                { dx: 1, dy: -1 }
+            ];
+            for (let y = 0; y &lt; 15; y++) {
+                for (let x = 0; x &lt; 15; x++) {
+                    if (boardState[y][x] === player) {
+                        for (let { dx, dy } of directions) {
+                            if (checkDirection(x, y, dx, dy, player)) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        function checkDirection(x, y, dx, dy, player) {
+            let count = 0;
+            for (let i = 0; i &lt; 5; i++) {
+                const nx = x + i * dx;
+                const ny = y + i * dy;
+                if (nx &gt;= 0 &amp;&amp; nx &lt; 15 &amp;&amp; ny &gt;= 0 &amp;&amp; ny &lt; 15 &amp;&amp; boardState[ny][nx] === player) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+            return count === 5;
+        }
+
+        function updateScores() {
+            playerScoreElem.textContent = playerScore;
+            aiScoreElem.textContent = aiScore;
+        }
+
+        function resetGame() {
+            boardState = Array(15).fill().map(() =&gt; Array(15).fill(0));
+            createBoard();
+        }
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+
+        createBoard();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p></p>
+<h1>cmsimde</h1>
 <h1>分組專案</h1>
 <h2>分組專案簡介</h2>
 <p><a href="https://mde.tw/wcm2024/blog/wcm-w10-project.html">請參照Blog上內容進行操作</a></p>
-<h1>cmsimde</h1>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 2680821ed78a9f308a1a42f193bc24ea49d61c5e
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
@@ -35,11 +501,8 @@
 <p><span style="background-color: #ccffcc;">SStatic</span> - Start Static Site - 利用 Python 啟動網站伺服功能, 可以讓使用者檢查轉檔後的靜態網站內容.</p>
 <p><span style="background-color: #ccffcc;">RStatic</span> - Replit Static Site URL - 僅用於 Replit 模式, 當使用者按下 SStatic 後, 可以按下 RStatic 進入當下尚未推向 Github Pages 的靜態網站.</p>
 <p><span style="background-color: #ccffcc;">80</span> - 由 init.py 中 static_port 所決定的連結字串, 一般不使用 80, 只有在 Replit 中為了與動態網站共用 port, 才特別設為 80.</p>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<p></p><h1>Replit</h1>
-=======
+<p></p>
 <h1>Replit</h1>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 2680821ed78a9f308a1a42f193bc24ea49d61c5e
 <p>若要改版，必須確定 home/runner/.ssh 目錄下有 id_rsa 與config</p>
 <p>若要Replit 維護分組網站內容，必須要動態設定，.ssh下的 id_rsa與 config</p>
 <p><a href="https://replit.com">https://replit.com</a></p>
@@ -102,7 +565,8 @@ def fetch_csv_data():
   req.send()
   
 # 呼叫函式讀取 CSV 資料
-fetch_csv_data()</pre><h1>Brython</h1>
+fetch_csv_data()</pre>
+<h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>

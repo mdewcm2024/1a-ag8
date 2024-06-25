@@ -142,11 +142,169 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">計算機 << <a href='計算機.html'>Previous</a> <a href='五子棋遊戲.html'>Next</a> >> 五子棋遊戲<br /><h1>期末報告</h1>
-<p><span><a href="https://41046109.github.io/wcm2024/downloads/%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A.pdf">簡報的pdf檔</a></span></p>
-<p><span>簡報的影片檔:</span></p>
-<p><iframe allowfullscreen="allowfullscreen" frameborder="2" height="315" src="https://www.youtube.com/embed/ImJssLcvV0w?si=ZDBkTMNxTG7HqJRv" width="560"></iframe></p>
-<br />計算機 << <a href='計算機.html'>Previous</a> <a href='五子棋遊戲.html'>Next</a> >> 五子棋遊戲</div>
+    <div id="tipue_search_content">期中報告 << <a href='期中報告.html'>Previous</a> <a href='期末報告.html'>Next</a> >> 期末報告<br /><h1>計算機</h1>
+<p><img alt="" height="350" src="./../images/計算機.png" width="316"/></p>
+<p>程式碼:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Brython Calculator&lt;/title&gt;
+    &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        .calculator {
+            width: 300px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator .output {
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .calculator .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .calculator button {
+            font-size: 18px;
+            padding: 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: #e0e0e0;
+            transition: background-color 0.3s;
+        }
+
+        .calculator button:hover {
+            background-color: #ccc;
+        }
+
+        .calculator .function {
+            background-color: #66ccff;
+            color: white;
+        }
+
+        .calculator .function:hover {
+            background-color: #33bbff;
+        }
+
+        .calculator .equal {
+            background-color: #66ff66;
+            color: white;
+        }
+
+        .calculator .equal:hover {
+            background-color: #33ff33;
+        }
+
+        .calculator .clear {
+            background-color: #ff6666;
+            color: white;
+        }
+
+        .calculator .clear:hover {
+            background-color: #ff3333;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="brython()"&gt;
+    &lt;div class="calculator"&gt;
+        &lt;div class="output" id="output"&gt;0&lt;/div&gt;
+        &lt;div class="buttons"&gt;
+            &lt;button class="function" onclick="memory_clear()"&gt;MC&lt;/button&gt;
+            &lt;button class="function" onclick="memory_add()"&gt;M+&lt;/button&gt;
+            &lt;button class="function" onclick="memory_subtract()"&gt;M-&lt;/button&gt;
+            &lt;button class="clear" onclick="clear_output()"&gt;C&lt;/button&gt;
+            &lt;button onclick="append_to_output('7')"&gt;7&lt;/button&gt;
+            &lt;button onclick="append_to_output('8')"&gt;8&lt;/button&gt;
+            &lt;button onclick="append_to_output('9')"&gt;9&lt;/button&gt;
+            &lt;button class="function" onclick="append_to_output('*')"&gt;*&lt;/button&gt;
+            &lt;button onclick="append_to_output('4')"&gt;4&lt;/button&gt;
+            &lt;button onclick="append_to_output('5')"&gt;5&lt;/button&gt;
+            &lt;button onclick="append_to_output('6')"&gt;6&lt;/button&gt;
+            &lt;button class="function" onclick="append_to_output('+')"&gt;+&lt;/button&gt;
+            &lt;button onclick="append_to_output('1')"&gt;1&lt;/button&gt;
+            &lt;button onclick="append_to_output('2')"&gt;2&lt;/button&gt;
+            &lt;button onclick="append_to_output('3')"&gt;3&lt;/button&gt;
+            &lt;button class="function" onclick="append_to_output('-')"&gt;-&lt;/button&gt;
+            &lt;button onclick="append_to_output('0')"&gt;0&lt;/button&gt;
+            &lt;button onclick="append_to_output('.')"&gt;.&lt;/button&gt;
+            &lt;button class="equal" onclick="calculate_result()"&gt;=&lt;/button&gt;
+            &lt;button class="function" onclick="append_to_output('/')"&gt;/&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script type="text/python"&gt;
+        from browser import document, window
+
+        output = document['output']
+        memory = 0
+        current_operation = ''
+        last_value = ''
+
+        def append_to_output(value):
+            if output.text == '0' or output.text == "Error":
+                output.text = value
+            else:
+                output.text += value
+
+        def clear_output():
+            global current_operation, last_value
+            output.text = '0'
+            current_operation = ''
+            last_value = ''
+
+        def memory_clear():
+            global memory
+            memory = 0
+
+        def memory_add():
+            global memory
+            memory += float(output.text)
+            clear_output()
+
+        def memory_subtract():
+            global memory
+            memory -= float(output.text)
+            clear_output()
+
+        def calculate_result():
+            global current_operation, last_value
+            try:
+                result = eval(output.text)
+                output.text = str(result)
+                last_value = output.text
+                current_operation = ''
+            except Exception as e:
+                output.text = "Error"
+                last_value = ''
+                current_operation = ''
+
+        # Export functions to be available from JavaScript
+        window.append_to_output = append_to_output
+        window.clear_output = clear_output
+        window.memory_clear = memory_clear
+        window.memory_add = memory_add
+        window.memory_subtract = memory_subtract
+        window.calculate_result = calculate_result
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p></p><br />期中報告 << <a href='期中報告.html'>Previous</a> <a href='期末報告.html'>Next</a> >> 期末報告</div>
 
     <!-- footer -->
       <div class="container">
